@@ -13,10 +13,10 @@ function HeaderOption({ Icon, title, avatar, onClick }) {
       {Icon && <Icon className="headerOption__icon" />}
       {avatar && (
         <Avatar
-          src={user ? user.photoUrl : avatarIcon}
+          src={user ? user.profilePic : avatarIcon}
           className="headerOption__icon"
         >
-          {user?.displayName[0].toUpperCase()}
+          {user?.displayName && user?.displayName[0].toUpperCase()}
         </Avatar>
       )}
       <h3 className="headerOption__title">{title}</h3>

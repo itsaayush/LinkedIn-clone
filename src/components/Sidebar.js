@@ -18,8 +18,8 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__top">
         <img src={splashImg} alt="" />
-        <Avatar src={user.photoUrl} className="sidebar__avatar">
-          {user.displayName[0].toUpperCase()}
+        <Avatar src={user.profilePic} className="sidebar__avatar">
+          {user?.displayName && user?.displayName[0].toUpperCase()}
         </Avatar>
         <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
